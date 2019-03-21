@@ -84,6 +84,7 @@ button {
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .item div {
