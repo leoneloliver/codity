@@ -1,4 +1,3 @@
-
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 .container{
   width: 100%;
@@ -259,5 +258,8 @@ button.btn-delete {
 @media screen and (max-width: 768px) {
   .avatar {
     display: none !important;
+  }
+  .btn-list {
+    margin: 26px 20px 0px 28px;
   }
 }
