@@ -249,7 +249,7 @@ button.btn-delete i {
 }
 
 .all-info.active {
-  margin-left: -180px;
+  margin-left: -178px;
   transition: all .5s ease;
   box-shadow: 6px 0px 6px -4px #656565;
 }
