@@ -87,6 +87,7 @@ button {
   border-bottom: 1px solid #ccc;
   transition: all .3s ease;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .item div {
