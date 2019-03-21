@@ -17,38 +17,41 @@
     <div class="total-list">Total {{users.info.results}}</div>
   </div>
 
-  
-  <div class="item" *ngFor="let user of users.results " [ngClass]="user.gender =='female' ?'new':'old'">
-    <div class="full-info-icon">
-       <button type="button" class="btn-cloud">
-        <i class="fa fa-cloud-download" aria-hidden="true"></i>
-      </button>
-       <button type="button" class="btn-delete">
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </button>
-    </div>
-    
-    <div class="all-info">
-      <div class="avatar">
-        <div *ngIf="user.picture.medium.length >0 then showImage else showPlaceholder"></div>
-      </div>
-      <ng-template #showImage><img [src]="user.picture.medium"></ng-template>
-      <ng-template #showPlaceholder><img src="/placeholder.jpg"></ng-template>
-      <!-- <img [src]="user.picture.medium">   -->
-      
-      <div class="info">
-        <h3>{{ user.name.first }} {{ user.name.last }} </h3>
-        <h4>{{ user.email }}</h4>
-        <p>{{ user.location.city }} - {{ user.location.state }} : {{ user.location.street }}</p>
-        <div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;{{ user.dob.date | date:'medium' }} </div> 
-      </div>
-      <div> 
-        <button type="button" class="btn-list">
-          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+  <div class="all-item">
+    <div class="item" *ngFor="let user of users.results " [ngClass]="user.gender =='female' ?'new':'old'">
+      <div class="full-info-icon">
+         <button type="button" class="btn-cloud">
+          <i class="fa fa-cloud-download" aria-hidden="true"></i>
         </button>
+         <button type="button" class="btn-delete">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="all-info">
+        <div class="avatar">
+          <div *ngIf="user.picture.medium.length >0 then showImage else showPlaceholder"></div>
+        </div>
+        <ng-template #showImage><img [src]="user.picture.medium"></ng-template>
+        <ng-template #showPlaceholder><img src="/placeholder.jpg"></ng-template>
+        <!-- <img [src]="user.picture.medium">   -->
+
+        <div class="info">
+          <h3>{{ user.name.first }} {{ user.name.last }} </h3>
+          <h4>{{ user.email }}</h4>
+          <p>{{ user.location.city }} - {{ user.location.state }} : {{ user.location.street }}</p>
+          <div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;{{ user.dob.date | date:'medium' }} </div> 
+        </div>
+        <div> 
+          <button type="button" class="btn-list">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-
+  <div class="footer">
+    <a>Load more</a>
+  </div>
 </div>
 
